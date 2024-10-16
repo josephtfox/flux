@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: tomcat-root-war
+    name: flux-system
   targetNamespace: default
