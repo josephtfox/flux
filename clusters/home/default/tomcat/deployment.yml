@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-root-war
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat-root-war
+  template:
+    metadata:
+      labels:
+        app: tomcat-root-war
+    spec:
+      containers:
+      - name: tomcat
+        image: tomcat:9.0
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: webapps
+          mountPath: /usr/local/tomcat/webapps
+      volumes:
+      - name: webapps
+        emptyDir: {}
