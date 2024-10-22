@@ -6,3 +6,5 @@ metadata:
 spec:
   interval: 5m
   url: https://github.com/dani-garcia/vaultwarden
+  ref:
+    branch: main
