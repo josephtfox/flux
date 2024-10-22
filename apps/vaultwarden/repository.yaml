@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: vaultwarden
+  namespace: flux-system
+spec:
+  interval: 30m
+  url: https://github.com/dani-garcia/vaultwarden
+  ref:
+    tag: 1.30.1
