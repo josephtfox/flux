@@ -4,7 +4,7 @@ metadata:
   name: vaultwarden
   namespace: vaultwarden
 spec:
-  interval: 5m
+  interval: 1m
   url: https://github.com/dani-garcia/vaultwarden
   ref:
     branch: main
