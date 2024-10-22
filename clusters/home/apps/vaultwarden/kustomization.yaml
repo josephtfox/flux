@@ -4,3 +4,4 @@ resources:
   - namespace.yaml
   #- helmrelease.yaml
   - service.yaml
+  - deployment.yaml
