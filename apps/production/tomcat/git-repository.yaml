@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: tomcat-deployment
-  namespace: tomcat-deployment
+  name: tomcat
+  namespace: tomcat
 spec:
   interval: 1m
   url: https://github.com/josephtfox/tomcat-root-war
