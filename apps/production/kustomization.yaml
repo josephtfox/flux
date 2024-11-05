@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ./vaultwarden
   - ./tomcat
+  - ./home-assistant
