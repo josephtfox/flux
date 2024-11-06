@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: ghcr.io/josephtfox/tomcat-root-war:latest
+        image: ghcr.io/josephtfox/tomcat-root-war:v1.0.1
         ports:
         - containerPort: 8080
