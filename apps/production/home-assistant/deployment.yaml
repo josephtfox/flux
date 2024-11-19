@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: homeassistant
+  namespace: homeassistant
+  labels:
+    app: homeassistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: homeassistant
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: homeassistant
+    spec:
+      volumes:
+        - name: config-volume
+          nfs:
+            server: 10.0.0.29
