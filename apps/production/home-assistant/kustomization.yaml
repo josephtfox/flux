@@ -3,3 +3,4 @@ namespace: home-assistant
 kind: Kustomization
 resources:
   - home-assistant-kustomize.yaml
+  - namespace.yaml
