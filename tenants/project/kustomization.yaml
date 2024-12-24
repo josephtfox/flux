@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 # app-team/app1
   - ./app-team/app1/production
-  - ./app-team/app2/production
+  # - ./app-team/app2/production
   
