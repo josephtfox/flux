@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: vaultwarden
 resources:
   - traefik-helm.yaml
-  - traefik-.yaml
+  - traefik-release.yaml
