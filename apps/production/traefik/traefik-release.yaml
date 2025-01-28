@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: traefik
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: traefik
+      version: "10.x"
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: flux-system
+  values:
+    deployment:
+      podAnnotations:
+        prometheus.io/port: "9100"
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+    metrics:
+      prometheus:
+        entryPoint: metrics
