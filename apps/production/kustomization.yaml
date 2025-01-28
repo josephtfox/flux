@@ -4,3 +4,4 @@ resources:
   - vaultwarden
   - tomcat
   - home-assistant
+  - traefik
