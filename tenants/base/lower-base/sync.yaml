@@ -5,7 +5,7 @@ metadata:
   namespace: apps
 spec:
   interval: 1m
-  url: https://github.com/josephtfox/flux
+  url: https://github.com/josephtfox/sample-maven-app
   ref:
     branch: lower-base
 ---
