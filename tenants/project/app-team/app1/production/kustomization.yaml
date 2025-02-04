@@ -3,7 +3,7 @@ kind: Kustomization
 namePrefix: app1
 namespace: prod-app1
 resources:
-  - ../../../../base/lower_base/
+  - ../../../../base/lower-base/
 
 patches:
   - path: patch-tenant-sync.yaml
