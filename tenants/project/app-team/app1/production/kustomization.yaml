@@ -6,7 +6,7 @@ resources:
   - ../../../../base/lower-base/
 
 patches:
-  - path: patch-tenant-sync.yaml
+  - path: patch-sync.yaml
     target:
       kind: Kustomization
       name: tenant
