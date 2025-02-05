@@ -37,8 +37,8 @@ spec:
         podMonitorSelector:
           matchLabels:
             app.kubernetes.io/component: monitoring
-        service:
-          type: NodePort
+      service:
+        type: NodePort
     grafana:
       defaultDashboardsEnabled: false
       adminPassword: flux
