@@ -3,5 +3,7 @@ kind: Kustomization
 resources:
   - rbac.yaml
   - sync.yaml
+  - app-user-role.yaml
+  - app-user-rolebinding.yaml
 
 namespace: default
