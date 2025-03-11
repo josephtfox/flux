@@ -8,7 +8,7 @@ resources:
   - ingressroute.yaml
 
 configMapGenerator:
-  - name: traefik-values
+  - name: traefik
     files:
       - values.yaml
 
