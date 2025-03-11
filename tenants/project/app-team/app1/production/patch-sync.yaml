@@ -1,10 +1,24 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: tenant
+  name: nginx-deployment
 spec:
-  serviceAccountName: app1
-  path: ./app-team/app1/production
-  sourceRef:
-    kind: GitRepository
-    name: app1-tenant
+  replicas: 3  # Increase replicas for production
+  template:
+    spec:
+      containers:
+      - name: nginx
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer  # Change to LoadBalancer for production
