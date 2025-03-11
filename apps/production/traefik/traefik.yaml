@@ -8,12 +8,12 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: "10.x.x" # Replace with your desired version
+      # version: "10.x.x" # Replace with your desired version
       sourceRef:
         kind: HelmRepository
-        name: traefik-repo # Ensure this repo is defined in Flux
+        name: traefik # Ensure this repo is defined in Flux
         namespace: flux-system
   valuesFrom:
     - kind: ConfigMap
       name: traefik-values
-
+      namespace: traefik
