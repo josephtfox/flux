@@ -11,7 +11,6 @@ spec:
       version: 13.x.x
       sourceRef:
         kind: HelmRepository
-        name: k8s-at-home
         namespace: flux-system
   values:
     image:
