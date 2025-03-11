@@ -1,23 +1,31 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: lower-base
-  namespace: apps
+  name: nginx-deployment
 spec:
-  interval: 1m
-  url: https://github.com/josephtfox/sample-maven-app
-  ref:
-    branch: master
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
+apiVersion: v1
+kind: Service
 metadata:
-  name: lower-base
-  namespace: apps
+  name: nginx-service
 spec:
-  serviceAccountName: lower-base
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: lower-base
-  prune: true
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
