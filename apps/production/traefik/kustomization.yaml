@@ -11,3 +11,5 @@ configMapGenerator:
   - name: traefik-values
     files:
       - values.yaml
+
+namespace: traefik
