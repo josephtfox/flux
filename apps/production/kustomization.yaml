@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   # - metallb
   # - traefik
-  - cert-manager
+  - cert-manager/cert-manager.yaml
   - home-assistant
   # - vaultwarden
