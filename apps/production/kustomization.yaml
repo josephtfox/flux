@@ -5,5 +5,5 @@ resources:
   # - traefik
   - cert-manager/controllers.yaml
   - cert-manager/issuers.yaml
-  - home-assistant
+  # - home-assistant
   # - vaultwarden
