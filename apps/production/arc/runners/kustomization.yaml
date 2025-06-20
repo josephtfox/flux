@@ -1,0 +1,3 @@
+resources:
+  - runnerdeployment.yaml
+  # - horizontalrunnerautoscaler.yaml
