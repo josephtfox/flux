@@ -1,0 +1,15 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: HorizontalRunnerAutoscaler
+metadata:
+  name: self-hosted-runner-autoscaler
+  namespace: actions
+spec:
+  scaleTargetRef:
+    kind: RunnerDeployment
+    name: self-hosted-runner
+  minReplicas: 1
+  maxReplicas: 10
+  scaleUpTriggers:
+    - githubEvent:
+        workflowJob: {}
+      duration: 30m
