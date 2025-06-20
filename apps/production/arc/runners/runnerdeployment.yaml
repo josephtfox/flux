@@ -6,7 +6,7 @@ metadata:
 spec:
   template:
     spec:
-      organization: your-org-name
+      organization: jtfoxtech
       labels:
         - self-hosted
         - linux
