@@ -11,5 +11,5 @@ spec:
     kind: GitRepository
     name: flux-system
   dependsOn:
-    - name: cert-manager
+    - name: cert-manager-controllers
   timeout: 2m
