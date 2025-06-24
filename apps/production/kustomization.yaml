@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   # - metallb
   # - traefik
-  - sealed-secrets/controller.yaml
+  - sealed-secrets
   - cert-manager/controllers.yaml
   - cert-manager/issuers.yaml
   # - home-assistant
