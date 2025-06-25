@@ -4,7 +4,7 @@ metadata:
   name: actions-runner-controller
   namespace: actions
 spec:
-  interval: 5m
+  interval: 10m
   chart:
     spec:
       chart: actions-runner-controller
@@ -15,8 +15,10 @@ spec:
         namespace: flux-system
   install:
     createNamespace: true
-  values:
-    authSecret:
-      enabled: true
-      create: false
-      name: controller-manager
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  valuesFrom:
+    - kind: ConfigMap
+      name: arc-values
+
