@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: arc-values
+  namespace: actions
+data:
+  values.yaml: |
+    installCRDs: true
+    replicaCount: 1
